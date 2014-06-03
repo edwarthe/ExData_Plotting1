@@ -4,6 +4,10 @@
 # Reading the data from household_power_consumption.txt file
 hpc<-read.table("household_power_consumption.txt",header= TRUE,sep=";")
 
+# Set language to English
+Sys.setenv(LANGUAGE="en")
+Sys.setlocale("LC_TIME", "English")
+
 # Constructing the Plot 4
 par(mfrow=c(2,2))
 with(subset(hpc,Date=="1/2/2007" |Date=="2/2/2007" ),{
